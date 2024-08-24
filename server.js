@@ -8,7 +8,7 @@ import mongoose from 'mongoose';
 import cookieParser from 'cookie-parser';
 import { v2 as cloudinary } from 'cloudinary';
 import helmet from 'helmet';
-import mongoSanitze from 'express-mongo-sanitize';
+import mongoSanitize from 'express-mongo-sanitize';
 
 // ROUTERS
 import jobRouter from './routes/jobRouter.js';
@@ -40,7 +40,7 @@ app.use(express.static(path.resolve(__dirname, './client/dist')));
 app.use(cookieParser());
 app.use(express.json());
 app.use(helmet());
-app.use(mongoSanitze());
+app.use(mongoSanitize());
 
 app.get('/', (req, res) => {
   res.send('Hello World');
